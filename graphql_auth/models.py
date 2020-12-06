@@ -31,7 +31,7 @@ class UserStatus(models.Model):
     user = models.OneToOneField(
         django_settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="status"
     )
-    verified = models.BooleanField(default=False)
+    verified = models.BooleanField(default=True)
     archived = models.BooleanField(default=False)
     secondary_email = models.EmailField(blank=True, null=True)
 
